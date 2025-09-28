@@ -1,19 +1,11 @@
 document.body.style.backgroundColor="darkgreen";
 document.body.style.color="white";
 
- let getal = window.prompt("["1"]["2"]["3"]["4"]["5"]");
-
- // getal = [1][2][3][4][5]
-
-console.log(`Jou nummer was ${getal}`);
-console.log(["4"]["3"]["2"]["1"]["0"]);
-
-
-
-// let getal = window.prompt("Geef een getal:")
-// for(let a=1; a <=getal; a++) {
-//     if (a % 5 == 0){
-//        console.log(a)
-//     }
-// }
+let number = parseInt(prompt("Voer een getal in:"));
+let reversed = 0;
+for (let i = number; i > 0; i = (i - (i % 10)) / 10) {
+    let laatsteCijfer = i % 10; // Haal het laatste cijfer
+    reversed = reversed * 10 + laatsteCijfer; // Voeg het laatste cijfer toe aan reversed
+}
+console.log(reversed);
 
